@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Learn to Ski";
+}
+<h1>@ViewData["Title"]</h1>
+
+<h6>Learning to ski can be tricky. But learning from an experienced skier makes things a lot less intimidating.
+    Below are details for personalized skiing lessons. Use this calculator to find what your price would be to become the skier you dream to be.
+
+</h6>
+
+@* // page for the lessons calculator*@
+<title>Tutoring Calculator</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<div id="calculator">
+    <label for="hours">Number of hours:</label>
+    <input type="number" id="hours">
+    <br>
+    <label for="rate">Hourly rate:</label>
+    <input type="text" id="rate" value="$50" disabled>
+    <br>
+    <button id="calculate">Calculate Total</button>
+    <br>
+    <br>
+    <label for="total">Total:</label>
+    <input type="text" id="total" readonly>
+    <br>
+    <a asp-area="" asp-controller="Home" asp-action="Index">Return Home</a>
+</div>
+
+<script src="calculator.js"></script>
